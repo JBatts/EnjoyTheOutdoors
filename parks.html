@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>National Parks</title>
     <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="stylesheet" href="./CSS/parks.css">
+    <script src="data/nationalParkData.js"></script>
+    <script src="data/locationData.js"></script>
+    <script src="data/parkTypeData.js"></script>
     <script src="./scripts/main.js"></script>
 </head>
 
 <body>
     <header>
-        <h1>Looking for National Parks?</h1>
+        <h1>Looking for National Parks?</h1> <br>
         <nav id="nav">
             <a href="index.html">Homepage</a>
             <a href="mount.html">Mountains Info</a>
@@ -19,12 +23,45 @@
         </nav>
     </header>
     <main>
-        <h1>National Parks</h1>
-        <select name="parkSelect" id="parkSelect">
-            <option id="parkOpt">Search by Park Type</option>
+
+        <label>Search by Location</label>
+        <select id="parkSelect1">
+            <option>Please Select Below</option>
+
+            <!-- Creating options through javaScript  -->
         </select>
+
+        <label>Search by Park Type</label>
+        <select id="parkSelect2">
+            <option>Please Select Below</option>
+
+            <!-- Creating options through javaScript  -->
+        </select><br><br>
+
+        <button id="reset">Clear Form</button>
+            
     </main>
     <footer>
+        <div id="parkDetails" style="display: none;">
+            <h3>National Parks Available</h3>
+            <table border = "5">
+                <thead>
+                    <tr>
+                        <th>National Park</th>
+
+                        <th>City</th>
+
+                        <th>Address</th>
+
+                        <th>Phone Number</th>
+
+                        <th>Website (If Available)</th>
+                    </tr>
+                </thead>
+                <tbody id="parkBody"></tbody>
+            </table>
+            
+        </div><br>
         Copyright 2024 &copy;
     </footer>
 </body>

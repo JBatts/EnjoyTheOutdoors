@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: skyblue;
+    background-color: darkslateblue;
     color: whitesmoke;
     text-align: center;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
@@ -17,11 +17,17 @@ nav a{
     margin-bottom: 1rem;
     padding: 0.5rem;
     text-decoration: none;
-    width: 30vw;
+    width: 20vw;
     
+}
+
+nav a:hover{
+    background-color: brown;
+    color: gold;
 }
 
 nav a.selected{
     background-color: brown;
     color: gold;
 }
+
