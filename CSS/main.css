@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: skyblue;
     color: whitesmoke;
@@ -8,8 +13,15 @@ body {
 nav a{
     display: inline-block; 
     background-color: goldenrod;
-    margin: 0.5px;
+    margin: 1.5px;
     margin-bottom: 1rem;
     padding: 0.5rem;
     text-decoration: none;
+    width: 30vw;
+    
+}
+
+nav a.selected{
+    background-color: brown;
+    color: gold;
 }
