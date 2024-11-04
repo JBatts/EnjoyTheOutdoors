@@ -7,7 +7,7 @@
     color: #333; /* Dark text color for contrast */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    border: 2px solid #007acc; /* Border with a custom color */
+    /* border: 2px solid #007acc; Border with a custom color */
 }
 
 /* Title styling */
@@ -32,18 +32,18 @@
     line-height: 1.5; /* Spacing between lines */
 }
 
-/* Box styling for multiple mountains */
-#mountainDetails .mountain-box {
-    margin-bottom: 2rem; /* Space between mountains */
-    padding: 1rem;
-    background-color: #e8f4fc; /* Light blue background */
-    border-radius: 6px;
-    border: 1px solid #007acc;
+
+
+.mountain-box {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
 }
 
-/* Additional padding for each mountain box */
-#mountainDetails .mountain-box h3,
-#mountainDetails .mountain-box p {
-    margin: 0.5rem 0; /* Space inside each box */
+.mountain-box:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
-

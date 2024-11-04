@@ -13,11 +13,12 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
-    color: whitesmoke;
+    color: #333;
     text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
+    line-height: 1.6;
 }
 
 nav a{
@@ -131,18 +132,20 @@ select {
 
 /* Button styling */
 button {
-    padding: 0.5rem 1rem;
-    background-color: goldenrod;
+    padding: 10px 15px;
+    background-color: #007BFF;
     border: none;
     border-radius: 5px;
-    color: white;
+    color: #fff;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background-color: brown; /* Change color on hover */
+     /* Change color on hover */
+    background-color: #0056b3; 
+    transform: scale(1.15);
 }
 
 /* Enhanced table styling */
