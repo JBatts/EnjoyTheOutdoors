@@ -118,9 +118,14 @@ main {
 }
 
 label {
+    background-color: #fff;
+    width:fit-content;
     display: block; /* Makes labels take a full line */
-    margin: 1rem 0 0.5rem; /* Adds margin for spacing */
+    margin: 1rem auto; /* Adds margin for spacing */
+    padding: .5rem 1rem;
+    border-radius: 4rem;
     font-size: 1.2rem; /* Slightly increases font size */
+    opacity: 75%;
 }
 
 select {
@@ -171,6 +176,13 @@ table tbody td {
 
 h1{
     color: black;
+    background-color: #fff;
+    width:fit-content;
+    display: block; 
+    margin: auto;
+    padding: .5rem 1rem;
+    border-radius: 4rem;
+    opacity: 75%;
 }
 
 h3{
