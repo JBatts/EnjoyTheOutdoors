@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Display mountain details when selected
     mountSel.addEventListener("change", () => {
-        
+
         mountainDetails.innerHTML = ""; // Clear previous details
 
         if (mountSel.value === "") {
@@ -55,24 +55,24 @@ document.addEventListener("DOMContentLoaded", () => {
         mountainDetails.innerHTML = ""; // Clear displayed details
     });
 
-    // async function getSunsetForMountain(lat, lng) {
-    //     try {
-    //         const response = await fetch(`https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=today`);
-    
-    //         // Check if the response is ok (status code 200-299)
-    //         if (!response.ok) {
-    //             throw new Error(`HTTP error! Status: ${response.status}`);
-    //         }
-    
-    //         const data = await response.json();
-    //         return data;
-    //     } catch (error) {
-    //         console.error('Error fetching sunset data:', error);
-    //         alert('Unable to fetch sunset data. Please try again later.'); // Notify the user
-    //         return null; // Or handle the error as needed
-    //     }
-    // }
-    
+    async function getSunsetForMountain(lat, lng) {
+        try {
+            const response = await fetch(`https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=today`);
+
+            // Check if the response is ok (status code 200-299)
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            return data.results;
+        } catch (error) {
+            console.error('Error fetching sunset data:', error);
+            alert('Unable to fetch sunset data. Please try again later.'); // Notify the user
+            return null; // Or handle the error as needed
+        }
+    }
+
 
     // Function to display a mountain's details
     function displayMountainDetails(mountain) {
@@ -86,7 +86,22 @@ document.addEventListener("DOMContentLoaded", () => {
             <img src="${mountain.img}" alt="${mountain.name}" style="width: 300px; height: auto;">
             <p>Description: ${mountain.desc}</p>
         `;
+
+        // Add Show Sunrise/Sunset button
+        const sunButton = document.createElement("button");
+        sunButton.textContent = "Show Sunrise/Sunset";
+        sunButton.addEventListener("click", async () => {
+            const sunData = await getSunsetForMountain(mountain.lat, mountain.lng);
+            if (sunData) {
+                const sunInfo = document.createElement("p");
+                sunInfo.innerHTML = `Sunrise: ${sunData.sunrise} UTC<br>Sunset: ${sunData.sunset} UTC`;
+                mountainInfo.appendChild(sunInfo);
+                sunButton.disabled = true; // Disable the button after fetching data
+            }
+        });
+
         mountainDetails.appendChild(mountainInfo);
+        mountainInfo.appendChild(sunButton)
     }
 });
 
