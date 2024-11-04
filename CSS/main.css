@@ -31,3 +31,120 @@ nav a.selected{
     color: gold;
 }
 
+/* Basic table styling */
+table {
+    width: 80%;
+    margin: 1rem auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    color: #333333;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Header row */
+table thead th {
+    background-color: goldenrod;
+    color: #ffffff;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: left;
+    border-bottom: 2px solid #333333;
+}
+
+/* Table cells */
+table tbody td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Zebra striping for rows */
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect on rows */
+table tbody tr:hover {
+    background-color: #e0f7fa;
+}
+
+/* Link styling for website column */
+table tbody td a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+table tbody td a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: darkslateblue; /* Dark background for header */
+    padding: 1rem 0; /* Padding for top and bottom */
+}
+
+footer {
+    background-color: darkslateblue; /* Same as header */
+    color: white; /* Change text color to stand out */
+    padding: 1rem 0; /* Padding for footer */
+    position: relative; /* Ensures footer stays at the bottom */
+}
+
+footer div {
+    margin: 0 auto; /* Center the copyright text */
+}
+
+main {
+    padding: 1.5rem; /* Adds padding around the main content */
+}
+
+label {
+    display: block; /* Makes labels take a full line */
+    margin: 1rem 0 0.5rem; /* Adds margin for spacing */
+    font-size: 1.2rem; /* Slightly increases font size */
+}
+
+select {
+    width: 80%; /* Makes dropdowns wider */
+    padding: 0.5rem; /* Adds padding inside dropdowns */
+    font-size: 1rem; /* Increases font size */
+    border: 2px solid #007acc; /* Custom border color */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 1rem; /* Space below dropdown */
+}
+
+/* Button styling */
+button {
+    padding: 0.5rem 1rem;
+    background-color: goldenrod;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: brown; /* Change color on hover */
+}
+
+/* Enhanced table styling */
+table {
+    width: 90%; /* Slightly increase the width */
+    margin: 2rem auto; /* Center the table */
+    border: 2px solid #333; /* Border around the table */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Header row */
+table thead th {
+    font-size: 1.2rem; /* Increase header font size */
+}
+
+/* Table cells */
+table tbody td {
+    font-size: 1rem; /* Consistent font size */
+    border: 1px solid #ddd; /* Light border for cells */
+}

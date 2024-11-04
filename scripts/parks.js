@@ -7,6 +7,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const parkBody = document.getElementById("parkBody")
     const reset = document.getElementById("reset")
     
+    const defaultOptions = ["Please Select Below", "All Parks"];
+    defaultOptions.forEach(text=>{
+        const optionLoc = new Option(text, text);
+        const optionType = new Option(text, text);
+        parkSelect1.add(optionLoc);
+        parkSelect2.add(optionType)
+    })
+
     locationsArray.forEach(state => {
         const option = document.createElement("option")
         option.value = state
@@ -27,9 +35,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
         parkBody.innerHTML = "";
 
-        const filteredParks = nationalParksArray.filter(park => {
-            const matchesLoc = selectedLoc === "Please Select Below" || park.State === selectedLoc
-            const matchesType = selectedParkType === "Please Select Below" || park.LocationName.includes(selectedParkType)
+        const filteredParks = nationalParksArray.filter((park) => {
+            const matchesLoc =
+                selectedLoc === "All Parks" ||
+                (selectedLoc !== "Please Select Below" && park.State === selectedLoc);
+            const matchesType =
+                selectedParkType === "All Parks" ||
+                (selectedParkType !== "Please Select Below" && park.LocationName.includes(selectedParkType));
             return matchesLoc && matchesType;
         });
 

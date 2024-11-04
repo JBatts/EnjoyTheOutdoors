@@ -1,0 +1,48 @@
+/* Styles for the mountain details container */
+#mountainDetails {
+    width: 80%; /* Control the width */
+    margin: 2rem auto; /* Center the box and add margin around it */
+    padding: 1.5rem; /* Add padding inside the box */
+    background-color: #f8f8f8; /* Light background color */
+    color: #333; /* Dark text color for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border: 2px solid #007acc; /* Border with a custom color */
+}
+
+/* Title styling */
+#mountainDetails h3 {
+    color: #007acc; /* Match the border color */
+    font-size: 1.6rem; /* Larger font for title */
+    margin-bottom: 1rem; /* Space below the title */
+}
+
+/* Image styling */
+#mountainDetails img {
+    width: 100%; /* Full width within container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 6px; /* Rounded corners */
+    margin-bottom: 1rem; /* Space below the image */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+}
+
+/* Description styling */
+#mountainDetails p {
+    font-size: 1rem; /* Text font size */
+    line-height: 1.5; /* Spacing between lines */
+}
+
+/* Box styling for multiple mountains */
+#mountainDetails .mountain-box {
+    margin-bottom: 2rem; /* Space between mountains */
+    padding: 1rem;
+    background-color: #e8f4fc; /* Light blue background */
+    border-radius: 6px;
+    border: 1px solid #007acc;
+}
+
+/* Additional padding for each mountain box */
+#mountainDetails .mountain-box h3,
+#mountainDetails .mountain-box p {
+    margin: 0.5rem 0; /* Space inside each box */
+}
