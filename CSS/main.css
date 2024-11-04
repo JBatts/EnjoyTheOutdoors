@@ -9,7 +9,7 @@ html, body {
 }
 
 body {
-    background-image:url("../Images/outdoorPic.jpg"); /*This is the Gif background*/
+    background-image:url("../Images/outdoorPic.jpg"); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
@@ -35,6 +35,7 @@ nav a{
 nav a:hover{
     background-color: brown;
     color: gold;
+    text-decoration: underline;
 }
 
 nav a.selected{
