@@ -3,11 +3,21 @@
     padding: 0;
 }
 
+html, body {
+    height: 100%; /* Ensure the html and body elements are full height */
+    margin: 0; /* Reset margins */
+}
+
 body {
-    background-color: darkslateblue;
+    background-image:url("../Images/outdoorPic.jpg"); /*This is the Gif background*/
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
     color: whitesmoke;
     text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 nav a{
@@ -18,7 +28,7 @@ nav a{
     padding: 0.5rem;
     text-decoration: none;
     width: 20vw;
-    
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover{
@@ -81,12 +91,15 @@ table tbody td a:hover {
 }
 
 header {
-    background-color: darkslateblue; /* Dark background for header */
+    /* background-color: #84cad3; Dark background for header */
+    border-radius: 5rem;
+    margin: auto;
+    width: 75%;
     padding: 1rem 0; /* Padding for top and bottom */
 }
 
 footer {
-    background-color: darkslateblue; /* Same as header */
+    
     color: white; /* Change text color to stand out */
     padding: 1rem 0; /* Padding for footer */
     position: relative; /* Ensures footer stays at the bottom */
@@ -98,6 +111,7 @@ footer div {
 
 main {
     padding: 1.5rem; /* Adds padding around the main content */
+    flex: 1;
 }
 
 label {
@@ -124,6 +138,7 @@ button {
     color: white;
     font-size: 1rem;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
@@ -148,3 +163,58 @@ table tbody td {
     font-size: 1rem; /* Consistent font size */
     border: 1px solid #ddd; /* Light border for cells */
 }
+
+h1{
+    color: black;
+}
+
+h3{
+    color: black;
+}
+
+label {
+    color: black;
+}
+
+#mountainDetails {
+    background-color: white;
+}
+
+p{
+    color: black;
+}
+
+#tbleHeader{
+    background-color: white;
+    padding: 1rem;
+    margin: auto;
+    width: 50%;
+    border-radius: 5rem;
+}
+
+footer {
+    background-color: #333; /* Dark background for footer */
+    color: white; /* Text color */
+    padding: 1rem; /* Padding for the footer */
+    text-align: center; /* Center footer text */
+}
+
+.footer-nav {
+    display: flex; /* Use flexbox for footer navigation */
+    justify-content: center; /* Center the navigation links */
+}
+
+.footer-nav a {
+    margin: 0 1rem; /* Space between links */
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-nav a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+
+
+
+

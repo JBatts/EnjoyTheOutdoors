@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Display mountain details when selected
     mountSel.addEventListener("change", () => {
-        console.log("Selected:", mountSel.value)
+        
         mountainDetails.innerHTML = ""; // Clear previous details
 
         if (mountSel.value === "all") {
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         } else {
             const selectedMountain = mountainsArray.find(mountain => mountain.name === mountSel.value);
-            console.log("Selected Mountain:", selectedMountain)
+
             if (selectedMountain) {
                 displayMountainDetails(selectedMountain);
             }
@@ -50,34 +50,28 @@ document.addEventListener("DOMContentLoaded", () => {
         mountainDetails.innerHTML = ""; // Clear displayed details
     });
 
-    async function getSunsetForMountain(lat, lng) {
-        try {
-            const response = await fetch(`https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=today`);
+    // async function getSunsetForMountain(lat, lng) {
+    //     try {
+    //         const response = await fetch(`https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=today`);
     
-            // Check if the response is ok (status code 200-299)
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
+    //         // Check if the response is ok (status code 200-299)
+    //         if (!response.ok) {
+    //             throw new Error(`HTTP error! Status: ${response.status}`);
+    //         }
     
-            const data = await response.json();
-            return data;
-        } catch (error) {
-            console.error('Error fetching sunset data:', error);
-            alert('Unable to fetch sunset data. Please try again later.'); // Notify the user
-            return null; // Or handle the error as needed
-        }
-    }
+    //         const data = await response.json();
+    //         return data;
+    //     } catch (error) {
+    //         console.error('Error fetching sunset data:', error);
+    //         alert('Unable to fetch sunset data. Please try again later.'); // Notify the user
+    //         return null; // Or handle the error as needed
+    //     }
+    // }
     
 
     // Function to display a mountain's details
-    async function displayMountainDetails(mountain) {
+    function displayMountainDetails(mountain) {
         mountainDetails.style.display = "block";
-
-        const sunsetData = await getSunsetForMountain(mountain.coords.lat, mountain.coords.lng);
-        const sunrise = sunsetData.results.sunrise;
-        const sunset = sunsetData.results.sunset;
-
-
 
         // Create elements for mountain details
         const mountainInfo = document.createElement("div");
@@ -86,8 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
             <h3>${mountain.name}</h3>
             <img src="${mountain.img}" alt="${mountain.name}" style="width: 300px; height: auto;">
             <p>Description: ${mountain.desc}</p>
-            <p>Sunrise: ${sunrise}</p>
-            <p>Sunset: ${sunset}</p>
         `;
         mountainDetails.appendChild(mountainInfo);
     }

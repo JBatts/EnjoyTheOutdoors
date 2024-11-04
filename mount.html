@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mountains</title>
-    <link rel="stylesheet" href="./CSS/main.css">
-    <link rel="stylesheet" href="./CSS/mount.css">
- <script src="./data/mountainData.js"></script>   
+    <script src="./data/mountainData.js"></script>   
     <script src="./scripts/mount.js"></script>
+    <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="stylesheet" href="./CSS/mountAndPark.css">
 
 </head>
 
@@ -31,17 +31,22 @@
         <!-- <img src="./data/images/Adams-StoryImage_2.jpg" alt=""> -->
     </main>
 
+    
+    <div id="mountainDetails" style="display: none;">
+        <h3 id="mountainName"></h3>
+        <img id="mountainImage" src="" alt="Mountain Image"
+        style="width: 300px; height: auto; border: 2rem black solid;">
+        <p id="mountainLocation"></p>
+    </div>
+    
+    <br>
     <footer>
-
-        <div id="mountainDetails" style="display: none;">
-            <h3 id="mountainName"></h3>
-            <img id="mountainImage" src="" alt="Mountain Image"
-                style="width: 300px; height: auto; border: 2rem black solid;">
-            <p id="mountainLocation"></p>
-        </div>
-
-        <br>
-        Copyright 2024 &copy;
+        Copyright 2024 &copy; <br><br>
+        <nav class="footer-nav">
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">About Us</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </nav>
     </footer>
 </body>
 

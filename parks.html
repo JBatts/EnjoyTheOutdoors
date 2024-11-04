@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>National Parks</title>
     <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="stylesheet" href="./CSS/mountAndPark.css">
     <script src="data/nationalParkData.js"></script>
     <script src="data/locationData.js"></script>
     <script src="data/parkTypeData.js"></script>
@@ -40,9 +41,9 @@
         <button id="reset">Clear Form</button>
             
     </main>
-    <footer>
+    
         <div id="parkDetails" style="display: none;">
-            <h3>National Parks Available</h3>
+            <h3 id="tbleHeader">National Parks Available</h3>
             <table border = "5">
                 <thead>
                     <tr>
@@ -61,7 +62,13 @@
             </table>
             
         </div><br>
-        Copyright 2024 &copy;
+        <footer>
+        Copyright 2024 &copy;<br><br>
+        <nav class="footer-nav">
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">About Us</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </nav>
     </footer>
 </body>
 
