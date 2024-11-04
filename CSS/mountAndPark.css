@@ -46,3 +46,14 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+table thead th {
+    background-color: goldenrod;
+    color: #ffffff;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center; /* Center-aligns header text */
+    border-bottom: 2px solid #333333;
+    border-right: 2px solid #ddd;
+    
+}
