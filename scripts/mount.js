@@ -30,6 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
         
         mountainDetails.innerHTML = ""; // Clear previous details
 
+        if (mountSel.value === "") {
+            mountainDetails.style.display = "none"
+            return;
+        }
+
         if (mountSel.value === "all") {
             mountainsArray.forEach(mountain => {
                 displayMountainDetails(mountain);
