@@ -84,7 +84,9 @@ document.addEventListener("DOMContentLoaded", () => {
         mountainInfo.innerHTML = `
             <h3>${mountain.name}</h3>
             <img src="${mountain.img}" alt="${mountain.name}" style="width: 300px; height: auto;">
-            <p>Description: ${mountain.desc}</p>
+            <p>Description: ${mountain.desc}</p> <br>
+            <p>Elevation: ${mountain.elevation} Feet</p>
+            <p>Description: ${mountain.effort}</p> <br>
         `;
 
         // Add Show Sunrise/Sunset button
@@ -94,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const sunData = await getSunsetForMountain(mountain.lat, mountain.lng);
             if (sunData) {
                 const sunInfo = document.createElement("p");
-                sunInfo.innerHTML = `Sunrise: ${sunData.sunrise} UTC<br>Sunset: ${sunData.sunset} UTC`;
+                sunInfo.innerHTML = `<br>Sunrise: ${sunData.sunrise} UTC<br>Sunset: ${sunData.sunset} UTC`;
                 mountainInfo.appendChild(sunInfo);
                 sunButton.disabled = true; // Disable the button after fetching data
             }

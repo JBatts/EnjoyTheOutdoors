@@ -1,13 +1,12 @@
 /* Styles for the mountain details container */
 #mountainDetails {
-    width: 80%; /* Control the width */
-    margin: 2rem auto; /* Center the box and add margin around it */
-    padding: 1.5rem; /* Add padding inside the box */
-    background-color: #f8f8f8; /* Light background color */
-    color: #333; /* Dark text color for contrast */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    /* border: 2px solid #007acc; Border with a custom color */
+    background-color: transparent; /* Set to transparent instead of white */
+    width: 80%; /* Center as needed */
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    opacity: 95%;
 }
 
 /* Title styling */
@@ -32,18 +31,18 @@
     line-height: 1.5; /* Spacing between lines */
 }
 
-
-
 .mountain-box {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
     transition: box-shadow 0.3s;
+    opacity: 100%;
 }
 
 .mountain-box:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+

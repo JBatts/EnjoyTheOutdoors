@@ -57,7 +57,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
             row.appendChild(cityCell);
 
             const addressCell = document.createElement("td");
-            addressCell.innerHTML = park.Address;
+            if(park.Address != 0){
+                addressCell.innerHTML = park.Address;
+            } else {
+                addressCell.innerHTML = "This location has no public address"
+            };
             row.appendChild(addressCell);
 
             const phoneCell = document.createElement("td");
