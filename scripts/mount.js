@@ -96,14 +96,14 @@ document.addEventListener("DOMContentLoaded", () => {
             const sunData = await getSunsetForMountain(mountain.lat, mountain.lng);
             if (sunData) {
                 const sunInfo = document.createElement("p");
-                sunInfo.innerHTML = `<br>Sunrise: ${sunData.sunrise} UTC<br>Sunset: ${sunData.sunset} UTC`;
+                sunInfo.innerHTML = `<br>Sunrise: ${sunData.sunrise} Local<br>Sunset: ${sunData.sunset} Local`;
                 mountainInfo.appendChild(sunInfo);
                 sunButton.disabled = true; // Disable the button after fetching data
             }
         });
 
         mountainDetails.appendChild(mountainInfo);
-        mountainInfo.appendChild(sunButton)
+        mountainInfo.appendChild(sunButton);
     }
 });
 
