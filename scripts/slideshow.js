@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         dots[slideIndex - 1].classList.add("active");
 
         // Set timer for the next slide
-        setTimeout(showSlides, 6000);
+        setTimeout(showSlides, 4000);
     }
 
     // Manually set the current slide
