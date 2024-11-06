@@ -137,7 +137,7 @@ label {
 }
 
 select {
-    width: 80%; /* Makes dropdowns wider */
+    width: 69%; /* Makes dropdowns wider */
     padding: 0.5rem; /* Adds padding inside dropdowns */
     font-size: 1rem; /* Increases font size */
     border: 2px solid #007acc; /* Custom border color */
@@ -298,6 +298,7 @@ footer {
     text-align: center;
     margin: .5rem;
     border-radius: 5rem;
+    border: 2px solid #007acc;
 }
 
 #message{

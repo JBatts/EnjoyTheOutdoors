@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const mountSel = document.getElementById("mountSel");
     const mountainDetails = document.getElementById("mountainDetails");
-    const mountainName = document.getElementById("mountainName");
-    const mountainImage = document.getElementById("mountainImage");
-    const mountainLocation = document.getElementById("mountainLocation");
     const resetBtn = document.getElementById("reset");
 
     // Add default "Please Select Below" and "Show All" options
