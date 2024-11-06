@@ -1,91 +1,64 @@
+# Enjoy the Outdoors
 
-# Enjoy The Outdoors
-
-Welcome to **Enjoy The Outdoors**! This website provides valuable information about national parks and mountains in the United States, helping users explore and learn more about beautiful outdoor locations. With features like park and mountain descriptions, elevation details, and sunrise/sunset times, users are encouraged to discover these natural wonders.
-
-### Website URL
-[Visit Enjoy The Outdoors](https://jbatts.github.io/EnjoyTheOutdoors/)
-
----
+Welcome to **Enjoy the Outdoors**! This project provides an interactive and informative experience for outdoor enthusiasts looking to explore national parks and mountains across the United States.
 
 ## Table of Contents
+- [Overview](#overview)
 - [Features](#features)
+- [Technologies](#technologies)
+- [Setup](#setup)
 - [Screenshots](#screenshots)
-- [Installation and Setup](#installation-and-setup)
 - [Usage](#usage)
-- [Technologies Used](#technologies-used)
+- [Live Demo](#live-demo)
 - [Contributing](#contributing)
 - [License](#license)
 
----
+## Overview
+**Enjoy the Outdoors** is a website dedicated to helping users discover and learn about various outdoor locations. Whether you're interested in finding mountains to hike, national parks to visit, or other natural landmarks, this site is designed to bring the outdoors to you. 
 
 ## Features
-- **National Parks Page**: Users can browse and filter a comprehensive list of national parks by location and park type. Each entry provides essential details like the park's name, location, contact information, and a link to its website (if available).
-- **Mountains Page**: The mountains page allows users to select a mountain and view information about it, including its elevation, description, and location. Users can also fetch and display sunrise and sunset times based on the mountain's coordinates.
-- **Dynamic Filtering**: Dropdown menus allow users to filter parks by state and type, making it easy to find specific locations.
-- **Responsive Design**: The website adapts to various screen sizes, making it accessible on both desktop and mobile devices.
+- **Search National Parks**: Filter parks by location and park type, and view relevant details such as address, phone, and website.
+- **Mountain Information**: Select a mountain to view its elevation, location, and sunrise/sunset times.
+- **Slideshow of Scenery**: A rotating image gallery on the homepage provides a glimpse of scenic locations.
+- **Additional Pages**: Learn more about the mission of the site and our commitment to privacy, or contact us directly.
 
----
+## Technologies
+- **HTML, CSS, JavaScript** for building and styling the website.
+- **Bootstrap** for responsive design elements.
+- **GitHub Pages** for hosting.
 
-## Screenshots
-Here are some screenshots of the website in action:
-
-### Homepage
-![Homepage Screenshot](screenshots/homepage.png)
-
-### National Parks Page
-![National Parks Page Screenshot](screenshots/parks-page.png)
-
-### Mountains Page
-![Mountains Page Screenshot](screenshots/mountains-page.png)
-
----
-
-## Installation and Setup
-
-To view and modify this project locally:
-
+## Setup
 1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/jbatts/EnjoyTheOutdoors.git
-   ```
-
-2. **Open the project folder**:
-   ```bash
-   cd EnjoyTheOutdoors
-   ```
-
-3. **Open the HTML files** in your preferred web browser.
-
-The website should load and function without the need for a server, as it’s built using HTML, CSS, and JavaScript.
-
----
+    ```bash
+    git clone https://github.com/jbatts/EnjoyTheOutdoors.git
+    ```
+2. **Navigate to the project folder**:
+    ```bash
+    cd EnjoyTheOutdoors
+    ```
+3. **Open `index.html` in a web browser** to view the site locally.
 
 ## Usage
-- **Navigating Pages**: Use the navigation links at the top of each page to access the Homepage, Mountains Info, and National Parks sections.
-- **Filtering National Parks**: On the Parks page, use the dropdowns to filter parks by state or park type.
-- **Viewing Mountain Details**: On the Mountains page, select a mountain from the dropdown to view details, and click "Show Sunrise/Sunset" to fetch and display the sunrise and sunset times for that mountain.
+- To explore national parks and mountains, use the dropdowns to search and view information.
+- Click on **slideshow dots** to navigate through the homepage image gallery.
+- Visit the About Us, Contact Us, and Privacy Policy pages for additional details.
 
----
-
-## Technologies Used
-- **HTML5** and **CSS3**: For structuring and styling the website.
-- **JavaScript**: For dynamic filtering, data fetching, and displaying mountain details.
-- **Bootstrap**: For responsive design elements and layouts.
-- **Sunrise-Sunset API**: Used on the Mountains page to fetch sunrise and sunset times based on latitude and longitude coordinates.
-
----
+## Screenshots
+- ![Homepage ScreenShot](./imageFolder/homepage.png)
+- ![Mountain ScreenShot](./imageFolder/mountPage.png)
+- ![Parks Page ScreenShot](./imageFolder/parkPage.png)
+- ![Contact Us Page](./imageFolder/contactPage.png)
+- ![About Us Page ScreenShot](./imageFolder/aboutPage.png)
+- ![Privacy Policy Page ScreenShot](./imageFolder/privacyPage.png)
+## Live Demo
+You can visit the live website at: [Enjoy the Outdoors](https://jbatts.github.io/EnjoyTheOutdoors/)
 
 ## Contributing
-If you'd like to contribute to this project:
-1. Fork the repository.
-2. Create a new branch for your feature.
-3. Commit your changes and push the branch.
-4. Submit a pull request.
-
----
+Contributions are welcome! Please fork the repository and make a pull request for any suggested improvements or features.
 
 ## License
-This project is open-source and available under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is open-source and available under the MIT License.
 
 ---
+
+Enjoy your journey through nature with **Enjoy the Outdoors**!
