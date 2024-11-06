@@ -73,7 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-
     // Function to display a mountain's details
     function displayMountainDetails(mountain) {
         mountainDetails.style.display = "block";
@@ -84,9 +83,9 @@ document.addEventListener("DOMContentLoaded", () => {
         mountainInfo.innerHTML = `
             <h3>${mountain.name}</h3>
             <img src="${mountain.img}" alt="${mountain.name}" style="width: 300px; height: auto;">
-            <p>Description: ${mountain.desc}</p> <br>
-            <p>Elevation: ${mountain.elevation} Feet</p>
-            <p>Description: ${mountain.effort}</p> <br>
+            <p><b>Description:</b> ${mountain.desc}</p> <br>
+            <p><b>Elevation:</b> ${mountain.elevation} Feet</p>
+            <p><b>Description:</b> ${mountain.effort}</p> <br>
         `;
 
         // Add Show Sunrise/Sunset button
