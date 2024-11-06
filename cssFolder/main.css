@@ -9,7 +9,7 @@ html, body {
 }
 
 body {
-    background-image:url("../images/outdoorPic.jpg"); 
+    background-image:url("../imageFolder/outdoorPic.jpg"); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
