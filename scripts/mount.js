@@ -28,21 +28,19 @@ document.addEventListener("DOMContentLoaded", () => {
         mountainDetails.innerHTML = ""; // Clear previous details
 
         if (mountSel.value === "") {
-            mountainDetails.style.display = "none"
+            mountainDetails.style.display = "none";
             return;
-        }
+        };
 
         if (mountSel.value === "all") {
-            mountainsArray.forEach(mountain => {
-                displayMountainDetails(mountain);
-            });
+            mountainsArray.forEach(displayMountainDetails);
         } else {
             const selectedMountain = mountainsArray.find(mountain => mountain.name === mountSel.value);
 
             if (selectedMountain) {
                 displayMountainDetails(selectedMountain);
-            }
-        }
+            };
+        };
     });
 
     // Reset button to clear selection
@@ -67,8 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error('Error fetching sunset data:', error);
             alert('Unable to fetch sunset data. Please try again later.'); // Notify the user
             return null; // Or handle the error as needed
-        }
-    }
+        };
+    };
 
     // Function to display a mountain's details
     function displayMountainDetails(mountain) {
@@ -92,14 +90,14 @@ document.addEventListener("DOMContentLoaded", () => {
             const sunData = await getSunsetForMountain(mountain.lat, mountain.lng);
             if (sunData) {
                 const sunInfo = document.createElement("p");
-                sunInfo.innerHTML = `<br>Sunrise: ${sunData.sunrise} Local<br>Sunset: ${sunData.sunset} Local`;
+                sunInfo.innerHTML = `<br><b>Sunrise: </b>${sunData.sunrise} Local<br><b>Sunset: </b>${sunData.sunset} Local`;
                 mountainInfo.appendChild(sunInfo);
                 sunButton.disabled = true; // Disable the button after fetching data
-            }
+            };
         });
 
         mountainDetails.appendChild(mountainInfo);
         mountainInfo.appendChild(sunButton);
-    }
+    };
 });
 

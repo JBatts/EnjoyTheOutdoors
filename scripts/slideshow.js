@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slideshowContainer.addEventListener("mouseout", (event) => {
         if (!slideshowContainer.contains(event.relatedTarget)) {
             showSlides();
-        }
+        };
     });
 
     document.querySelector(".prev").addEventListener("click", () => plusSlides(-1));
