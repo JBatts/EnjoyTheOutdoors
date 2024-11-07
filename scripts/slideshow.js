@@ -1,7 +1,7 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
-    let slideIndex = 0;
+    let slideIndex = 1;
     const slides = Array.from(document.getElementsByClassName("slide"));
     const dotsContainer = document.querySelector(".dots");
     let dots = [];
@@ -19,21 +19,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function showSlides() {
         slides.forEach(slide => (slide.style.display = "none"));
-        
+        dots.forEach(dot => dot.classList.remove("active"));
+    
         if (slideIndex > slides.length) {
-            slideIndex = 1; // Loop back to start
+            slideIndex = 1;
         }
     
         if (slideIndex < 1) {
-            slideIndex = slides.length; // Loop back to last
+            slideIndex = slides.length;
         }
     
-        dots.forEach(dot => dot.classList.remove("active"));
-        
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].classList.add("active");
     
-        timer = setTimeout(showSlides, 4000); // Auto-play timer
+        timer = setTimeout(() => {
+            slideIndex++;
+            showSlides();
+        }, 4000);
     }
     
 
