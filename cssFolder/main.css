@@ -255,8 +255,9 @@ footer {
 
 .slideshow-container {
     position: relative;
-    max-width: 525px;
+    max-width: 600px; /* Slightly increase the size for better view */
     margin: auto;
+    overflow: hidden; /* Ensures images stay within the rounded borders */
 }
 
 .slide {
@@ -264,12 +265,18 @@ footer {
 }
 
 .fade {
-    animation: fade 1.5s;
+    animation: fade 1.5s ease-in-out;
 }
 
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .dot {
@@ -284,7 +291,7 @@ footer {
 }
 
 .active, .dot:hover {
-    background-color: #717171;
+    background-color: #ff9800; /* Brighter color to indicate active */
 }
 
 .slidePics {
@@ -303,4 +310,37 @@ footer {
 
 #message{
     padding: 3rem;
+}
+
+.slideshow-container img {
+    height: 400px; /* Uniform height */
+    object-fit: cover; /* Ensure the image covers the full slide */
+}
+
+.slideshow-container .prev, 
+.slideshow-container .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+
+    user-select: none;
+}
+
+.slideshow-container .prev {
+    left: 0;
+}
+
+.slideshow-container .next {
+    right: 0;
+}
+
+.slideshow-container .prev:hover, 
+.slideshow-container .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }

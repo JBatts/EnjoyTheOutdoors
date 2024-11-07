@@ -2,11 +2,11 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     let slideIndex = 0;
-    const slides = Array.from(document.getElementsByClassName("slide")); // Convert HTMLCollection to array
+    const slides = Array.from(document.getElementsByClassName("slide"));
     const dotsContainer = document.querySelector(".dots");
     let dots = [];
+    let timer;
 
-    // Create dots based on the number of slides
     function createDots() {
         slides.forEach((_, index) => {
             const dot = document.createElement("span");
@@ -17,37 +17,60 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Show slides function
     function showSlides() {
-        // Hide all slides
-        slides.forEach(slide => {
-            slide.style.display = "none";
-        });
-
-        // Reset slide index if it exceeds the number of slides
-        slideIndex++;
+        slides.forEach(slide => (slide.style.display = "none"));
+        
         if (slideIndex > slides.length) {
-            slideIndex = 1;
+            slideIndex = 1; // Loop back to start
         }
-
-        // Remove active class from all dots
+    
+        if (slideIndex < 1) {
+            slideIndex = slides.length; // Loop back to last
+        }
+    
         dots.forEach(dot => dot.classList.remove("active"));
-
-        // Display the current slide and highlight the corresponding dot
+        
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].classList.add("active");
-
-        // Set timer for the next slide
-        setTimeout(showSlides, 4000);
+    
+        timer = setTimeout(showSlides, 4000); // Auto-play timer
     }
+    
 
-    // Manually set the current slide
     function currentSlide(n) {
-        slideIndex = n;
+        slideIndex = n + 1; // Adjust because showSlides expects 1-based index
+        clearTimeout(timer);
         showSlides();
     }
 
-    // Initialize dots and start the slideshow
+    function plusSlides(n) {
+        slideIndex += n;
+    
+        if (slideIndex > slides.length) {
+            slideIndex = 1; // Loop back to first slide
+        }
+    
+        if (slideIndex < 1) {
+            slideIndex = slides.length; // Loop to the last slide
+        }
+    
+        clearTimeout(timer); // Stop the auto-slide during manual navigation
+        showSlides();
+    }
+    
+
+    // Pause on hover and resume on mouseout
+    const slideshowContainer = document.querySelector(".slideshow-container");
+    slideshowContainer.addEventListener("mouseover", () => clearTimeout(timer));
+    slideshowContainer.addEventListener("mouseout", (event) => {
+        if (!slideshowContainer.contains(event.relatedTarget)) {
+            showSlides();
+        }
+    });
+
+    document.querySelector(".prev").addEventListener("click", () => plusSlides(-1));
+    document.querySelector(".next").addEventListener("click", () => plusSlides(1));
+
     createDots();
     showSlides();
 });
