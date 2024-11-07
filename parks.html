@@ -17,9 +17,16 @@
     <header>
         <h1>Looking for National Parks?</h1> <br>
         <nav id="nav">
-            <a href="index.html">Homepage</a>
-            <a href="mount.html">Mountains Info</a>
-            <a href="parks.html" class="selected">National Parks</a>
+            <a href="index.html">
+                <img src="./imageFolder/homepage_pic.jpg" alt="Home Icon" class="nav-icon"><br> Homepage
+            </a>
+            <a href="mount.html">
+                <img src="./imageFolder/mountain_pic.jpg" alt="Mountains Icon" class="nav-icon"><br> Mountains Info
+            </a>
+            <a href="parks.html" class="selected">
+                <img src="./imageFolder/park-pic222.jpg" alt="Parks Icon" class="nav-icon" id="parkPic"><br> National
+                Parks
+            </a>
         </nav>
     </header>
     <main>
@@ -35,35 +42,35 @@
         </select><br><br>
 
         <button id="reset">Clear Form</button>
-              <p id="errorMessage" style="display: none;">
-        No parks available for the selected criteria, <br>
-        Please try another search!
-    </p>  
+        <p id="errorMessage" style="display: none;">
+            No parks available for the selected criteria, <br>
+            Please try another search!
+        </p>
     </main>
-    
-                
-        <div id="parkDetails" style="display: none;">
-            
-            <table>
-                <thead>
-                    <tr>
-                        <th>National Park</th>
 
-                        <th>City</th>
 
-                        <th>Address</th>
+    <div id="parkDetails" style="display: none;">
 
-                        <th>Phone Number</th>
+        <table>
+            <thead>
+                <tr>
+                    <th>National Park</th>
 
-                        <th>Website (If Available)</th>
-                    </tr>
-                </thead>
-                <tbody id="parkBody"></tbody>
-            </table>
-            
-        </div><br>
-        <footer>
-            Copyright 2024 &copy; Bring the Outdoors to You<br><br>
+                    <th>City</th>
+
+                    <th>Address</th>
+
+                    <th>Phone Number</th>
+
+                    <th>Website (If Available)</th>
+                </tr>
+            </thead>
+            <tbody id="parkBody"></tbody>
+        </table>
+
+    </div><br>
+    <footer>
+        Copyright 2024 &copy; Bring the Outdoors to You<br><br>
         <nav class="footer-nav">
             <a href="contact.html">Contact Us</a>
             <a href="about.html">About Us</a>

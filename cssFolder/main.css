@@ -39,6 +39,7 @@ nav a{
     transition: background-color 0.3s, color 0.3s;
 }
 
+
 nav a:hover{
     background-color: brown;
     color: gold;
@@ -347,3 +348,28 @@ footer {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+#nav img {
+    width: 75px;
+    height: 75px;
+    opacity: 100%;
+}
+
+#nav a{
+    padding: 5px 0;
+    background-color: white;
+    border-radius: 5rem;
+    text-decoration: none;
+    opacity: 80%;
+    color: black;
+    font-weight: bold;
+}
+
+#nav a.selected{
+    text-decoration: underline;
+    color: brown;
+    opacity: 100%;
+}
+
+#nav a:hover{
+    opacity: 100%;
+}
