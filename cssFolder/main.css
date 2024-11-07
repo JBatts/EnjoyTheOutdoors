@@ -365,11 +365,12 @@ footer {
 }
 
 #nav a.selected{
-    text-decoration: underline;
-    color: brown;
+    font-weight: bolder;
     opacity: 100%;
+    color: #007acc;
 }
 
 #nav a:hover{
     opacity: 100%;
+    color: #007acc;
 }
