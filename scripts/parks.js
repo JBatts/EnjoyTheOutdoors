@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const defaultOptions = ["Please Select Below", "All Parks"];
     
     // Add default options to both dropdowns
-    defaultOptions.forEach(text => {
-        const optionLoc = new Option(text, text); // Create option for location dropdown
+    defaultOptions.forEach(text => { // No need to add
+        // const optionLoc = new Option(text, text); // Create option for location dropdown
         const optionType = new Option(text, text); // Create option for park type dropdown
-        parkSelect1.add(optionLoc); // Add to location dropdown
+        parkSelect1.add(new Option(text, text)); // Add to location dropdown
         parkSelect2.add(optionType); // Add to park type dropdown
     });
 

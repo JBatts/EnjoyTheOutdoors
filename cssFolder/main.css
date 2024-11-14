@@ -19,6 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 1.6;
+    font-size: 2vw;
 }
 
 nav {
@@ -362,6 +363,7 @@ footer {
     opacity: 80%;
     color: black;
     font-weight: bold;
+    min-width: 175px;
 }
 
 #nav a.selected{

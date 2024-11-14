@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Resume automatic slide transition when the mouse leaves the slideshow
     slideshowContainer.addEventListener("mouseout", (event) => {
         if (!slideshowContainer.contains(event.relatedTarget)) { // Ensure mouse actually left
-            showSlides(); // Resume slideshow
+            showSlides(); // Restarting slideshow from current slide
         }
     });
 
